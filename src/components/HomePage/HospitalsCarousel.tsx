@@ -1,18 +1,17 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination, A11y } from 'swiper';
 import HomepageStyles from '@/styles/HomePage.module.css';
-import MedicalCentreCard from '../hospCards/MedicalCentreCard';
 import { useState, useEffect } from 'react';
 import { MedicalCentreData } from '@/data/medicalCentres';
 
-interface Hospital {
+export interface Hospital {
   image: string;
   hospital: string;
   location: string;
   distance: string;
   specialists: number;
   type: 'hospital' | string;
-};
+}
 
 export default function HospitalsCarousel() {
   const [slides, setSlides] = useState<number>(3.5);
@@ -70,7 +69,6 @@ export default function HospitalsCarousel() {
         <div className={HomepageStyles.hospitalsCarousel}>
           {hospitals.map((x, index) => (
             <SwiperSlide key={index} style={{ width: 'fit-content' }}>
-              {/* <MedicalCentreCard details={x} width={310} height={280} /> */}
             </SwiperSlide>
           ))}
         </div>
