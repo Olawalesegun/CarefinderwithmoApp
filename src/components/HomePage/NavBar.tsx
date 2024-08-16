@@ -1,19 +1,11 @@
-import HomepageStyles from '@/styles/HomePage.module.css';
-
+import HomepageStyles from '../styles/HomePage.module.css';
 import { signOut } from 'firebase/auth';
-
 import Image from 'next/image';
-
 import Link from 'next/link';
-
 import { useEffect, useState } from 'react';
-
 import { IoClose } from 'react-icons/io5';
-
 import { RiMenu4Fill } from 'react-icons/ri';
-
 import { auth } from '../../Firebase/firebase.config';
-
 import { useAuth } from '../../pages/_app';
 
 function NavBar({ returnBack = false }) {
@@ -53,12 +45,11 @@ function NavBar({ returnBack = false }) {
 		}
 
 
-		if (returnBack) { // To return Navbar back to full width on page mount
-			setNav({
-				width: '100vw',
-
-				marginTop: '70px',
-			});
+		if (returnBack) { 
+			// setNav({
+			// 	width: '100vw',
+			// 	marginTop: '70px',
+			// });
 		} else {
 			window.addEventListener('scroll', handleScroll);
 		}
@@ -71,7 +62,7 @@ function NavBar({ returnBack = false }) {
 	return (
 		<div>
 			<div className={HomepageStyles.centerNav}>
-				<nav id='nav' className={HomepageStyles.nav} style={nav}>
+				<nav id='nav' className={HomepageStyles.nav} >
 					<Link href='/'>
 						<Image
 							src='/Logo-Black.svg'
@@ -80,7 +71,6 @@ function NavBar({ returnBack = false }) {
 							width={60}
 						/>
 					</Link>
-
 					<div>
 						<ul>
 							<li>

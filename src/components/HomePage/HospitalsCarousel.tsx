@@ -70,7 +70,7 @@ export default function HospitalsCarousel() {
         <div className={HomepageStyles.hospitalsCarousel}>
           {hospitals.map((x, index) => (
             <SwiperSlide key={index} style={{ width: 'fit-content' }}>
-              <MedicalCentreCard details={x} width={310} height={280} />
+              {/* <MedicalCentreCard details={x} width={310} height={280} /> */}
             </SwiperSlide>
           ))}
         </div>
