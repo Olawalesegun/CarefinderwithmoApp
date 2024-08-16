@@ -40,10 +40,10 @@ function NavBar({ returnBack = false }) {
 
 
 		if (returnBack) { 
-			setNav({
-				width: '100vw',
-				marginTop: '70px'
-			});
+			// setNav({
+			// 	width: '100vw',
+			// 	marginTop: '70px'
+			// });
 		} else {
 			window.addEventListener('scroll', handleScroll);
 		}
