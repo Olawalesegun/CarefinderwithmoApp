@@ -1,9 +1,8 @@
 ## CareFinder with Mo App
 
-![CareFinderAPP](https://drive.google.com/file/d/1zAiWpP3zlVWIhvmD5ZzyR5AFzyeVX6tf/view?usp=drive_link)
+![Carefinder Landing Page Image](https://imgur.com/a/TKGrMWf)
 
-
-**CareFinder Project Overview**
+**Project Overview**
 
 The CareFinder app is a web application built using Next.js, TypeScript, and React. It aims to assist users in locating nearby healthcare facilities. The app utilizes Google Maps API for location-based services, Firebase for authentication, and MUI for UI components.
 
