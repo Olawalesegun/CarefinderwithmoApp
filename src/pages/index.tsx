@@ -21,7 +21,6 @@ const HomePageHeader: React.FC = () => {
 					content="Your next Stop for all things related to finding care."
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				{/* <link rel="icon" href="/favicon.ico" /> */}
 			</Head>
 
 			<NavBar />

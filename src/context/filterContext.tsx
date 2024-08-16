@@ -12,12 +12,12 @@ interface FilterContextType {
   setFilter: React.Dispatch<React.SetStateAction<Filter>>;
 }
 
-const filterContext = createContext<FilterContextType>({
+export const filterContext = createContext<FilterContextType>({
   filter: { area: '', department: '', state: '' },
-  setFilter: () => {},
+  setFilter: () => {''},
 });
 
-interface FilterProviderProps {
+export interface FilterProviderProps {
   children: React.ReactNode;
 }
 

@@ -1,4 +1,4 @@
-import HomepageStyles from '../styles/HomePage.module.css';
+import HomePageStyles from '../../styles/HomePage.module.css';
 import { signOut } from 'firebase/auth';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,9 +13,7 @@ function NavBar({ returnBack = false }) {
 
 	const [nav, setNav] = useState({
 		width: '90vw',
-
 		marginTop: '120px',
-
 		position: 'absolute',
 	});
 
@@ -28,17 +26,13 @@ function NavBar({ returnBack = false }) {
 			if (window.scrollY > 300) {
 				setNav({
 					width: '100vw',
-
 					marginTop: '70px',
-
 					position: 'fixed',
 				});
 			} else {
 				setNav({
 					width: '90vw',
-
 					marginTop: '120px',
-
 					position: 'absolute',
 				});
 			}
@@ -46,10 +40,10 @@ function NavBar({ returnBack = false }) {
 
 
 		if (returnBack) { 
-			// setNav({
-			// 	width: '100vw',
-			// 	marginTop: '70px',
-			// });
+			setNav({
+				width: '100vw',
+				marginTop: '70px'
+			});
 		} else {
 			window.addEventListener('scroll', handleScroll);
 		}
@@ -61,8 +55,8 @@ function NavBar({ returnBack = false }) {
 
 	return (
 		<div>
-			<div className={HomepageStyles.centerNav}>
-				<nav id='nav' className={HomepageStyles.nav} >
+			<div className={HomePageStyles.centerNav}>
+				<nav id='nav' className={HomePageStyles.nav} >
 					<Link href='/'>
 						<Image
 							src='/Logo-Black.svg'
@@ -88,12 +82,12 @@ function NavBar({ returnBack = false }) {
 							)}
 
 							{!user ? (
-								<li className={HomepageStyles.loginButton}>
+								<li className={HomePageStyles.loginButton}>
 									<Link href='/Auth'>Login/SignUp</Link>
 								</li>
 							) : (
 								<li
-									className={HomepageStyles.loginButton}
+									className={HomePageStyles.loginButton}
 									onClick={() => signOut(auth)}
 								>
 									Logout
@@ -101,7 +95,7 @@ function NavBar({ returnBack = false }) {
 							)}
 						</ul>
 
-						<button className={HomepageStyles.navButton} onClick={showMobile}>
+						<button className={HomePageStyles.navButton} onClick={showMobile}>
 							<RiMenu4Fill />
 						</button>
 					</div>
